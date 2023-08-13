@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/css/reset.css';
+@import 'primeng/resources/themes/soho-dark/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeflex/primeflex';
+@import 'primeicons/primeicons.css';
+
+body {
+  @include styleclass('bg-gray-900');
+  font-family: Lato, Helvetica, sans-serif !important;
+}
+
+h1 {
+  @include styleclass('my-2 text-4xl font-bold');
+}
+
+h2 {
+  @include styleclass('my-2 text-2xl font-bold');
+}
+
+h3 {
+  @include styleclass('my-2 text-xl font-bold');
+}
+
+h4 {
+  @include styleclass('my-3 text-base font-bold');
+}
+
+h5 {
+  @include styleclass('my-3 text-sm font-bold');
+}
+
+h6 {
+  @include styleclass('my-3 text-xs font-bold');
+}
+
+pre {
+  @include styleclass('block m-2 p-3 white-space-nowrap bg-gray-800');
+}

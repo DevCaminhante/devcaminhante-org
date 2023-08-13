@@ -1,0 +1,78 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "my-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "flat": true,
+          "inlineStyle": true,
+          "inlineTemplate": true,
+          "skipTests": true,
+          "standalone": true,
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "dcorg",
+      "architect": {
+        "build": {
+          "builder": "@nx/vite:build",
+          "options": {
+            "configFile": "vite.config.ts",
+            "main": "src/main.ts",
+            "outputPath": "dist/client",
+            "styles": ["src/styles.scss"]
+          },
+          "defaultConfiguration": "production",
+          "configurations": {
+            "development": {
+              "mode": "development"
+            },
+            "production": {
+              "sourcemap": false,
+              "mode": "production"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nx/vite:dev-server",
+          "defaultConfiguration": "development",
+          "options": {
+            "buildTarget": "my-app:build",
+            "port": 5173,
+            "styles": ["src/styles.scss"]
+          },
+          "configurations": {
+            "development": {
+              "buildTarget": "my-app:build:development",
+              "hmr": true
+            },
+            "production": {
+              "buildTarget": "my-app:build:production"
+            }
+          }
+        },
+        "test": {
+          "builder": "@nx/vite:test"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "schematicCollections": ["@angular-eslint/schematics"],
+    "analytics": "a78c3039-f7e2-43c3-b4b7-a61b943dbcdd"
+  }
+}
