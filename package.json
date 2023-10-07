@@ -1,6 +1,12 @@
 {
   "name": "devcaminhante-org",
   "version": "0.1.0-SNAPSHOT",
+  "type": "module",
+  "main": "./src/main.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +14,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.0",
     "@angular/common": "^16.2.0",
