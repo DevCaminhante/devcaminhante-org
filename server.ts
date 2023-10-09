@@ -4,6 +4,8 @@ import process from 'node:process'
 import {APP_BASE_HREF} from '@angular/common'
 import {ngExpressEngine} from '@nguniversal/express-engine'
 import express from 'express'
+import {renderHTML} from '@master/css'
+import {config} from 'master.css.js'
 import bootstrap from './src/main.server.js'
 
 // The Express app is exported so that it can be used by serverless Functions.
@@ -29,7 +31,14 @@ export function app(): express.Express {
 
 	// All regular routes use the Universal engine
 	server.get('*', (request, response) => {
-		response.render(indexHtml, {req: request, providers: [{provide: APP_BASE_HREF, useValue: request.baseUrl}]})
+		response.render(indexHtml, {req: request, providers: [{provide: APP_BASE_HREF, useValue: request.baseUrl}]},
+			(error: Error, html: string) => {
+				if (error) {
+					console.log(error)
+				} else {
+					response.send(renderHTML(html, config))
+				}
+			})
 	})
 
 	return server
