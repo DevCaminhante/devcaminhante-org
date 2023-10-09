@@ -12,9 +12,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr": "node dist/devcaminhante-org/server.mjs"
+    "build:dev": "ng build --configuration development",
+    "serve:prod": "ng serve --configuration production",
+    "serve:ssr": "ng build && node dist/server.mjs",
+    "test": "ng test"
   },
   "dependencies": {
     "@angular/animations": "^16.2.8",

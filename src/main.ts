@@ -4,10 +4,10 @@ import {config} from 'master.css.js'
 import {appConfig} from './app/app.config.js'
 import {AppComponent} from './app/app.component.js'
 
-initRuntime(config)
+initRuntime(config);
 
-bootstrapApplication(AppComponent, appConfig)
-	// eslint-disable-next-line unicorn/prefer-top-level-await
-	.catch(error => {
+(window as any).doBootstrap = () => {
+	bootstrapApplication(AppComponent, appConfig).catch(error => {
 		console.error(error)
 	})
+}
