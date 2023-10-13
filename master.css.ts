@@ -1,14 +1,14 @@
-import type {Config} from '@master/css'
+import type { Config } from '@master/css'
 
 export const config: Config = {
+	animations: {},
 	classes: {},
 	colors: {},
-	rules: {},
-	values: {},
-	semantics: {},
-	viewports: {},
+	functions: {},
 	mediaQueries: {},
-	animations: {},
+	rules: {},
 	selectors: {},
-	functions: {}
+	semantics: {},
+	values: {},
+	viewports: {}
 }
