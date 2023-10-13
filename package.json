@@ -2,7 +2,6 @@
   "name": "devcaminhante-org",
   "version": "0.1.0-SNAPSHOT",
   "type": "module",
-  "exports": "./src/main.js",
   "engines": {
     "node": ">=18.8.0",
     "npm": ">=9.8.1"
@@ -14,7 +13,6 @@
     "build": "ng build",
     "build:dev": "ng build --configuration development",
     "serve:prod": "ng serve --configuration production",
-    "serve:ssr": "ng build && node dist/server.mjs",
     "test": "ng test"
   },
   "dependencies": {
