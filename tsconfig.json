@@ -1,37 +1,51 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-	"compileOnSave": false,
-	"compilerOptions": {
-		"allowJs": true,
-		"baseUrl": "./",
-		"declaration": false,
-		"downlevelIteration": true,
-		"experimentalDecorators": true,
-		"forceConsistentCasingInFileNames": true,
-		"importHelpers": true,
-		"lib": ["ES2022","dom"],
-		"module": "ESNext",
-		"moduleResolution": "bundler",
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
-		"noPropertyAccessFromIndexSignature": true,
-		"outDir": "./dist",
-		"paths": {
-			"@dcorg/core/*": ["./src/app/core/*"],
-			"@dcorg/ui/*": ["./src/app/ui/*"]
-		},
-		"sourceMap": true,
-		"strict": true,
-		"target": "ES2022",
-		"types": ["node"],
-		"useDefineForClassFields": false
-	},
 	"angularCompilerOptions": {
 		"enableI18nLegacyMessageIdFormat": false,
 		"strictInjectionParameters": true,
 		"strictInputAccessModifiers": true,
 		"strictTemplates": true
+	},
+	"compileOnSave": false,
+	"compilerOptions": {
+		// Type Checking
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"strict": true,
+		// Modules
+		"baseUrl": "./",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"paths": {
+			"@dcorg/core/*": ["./src/app/core/*"],
+			"@dcorg/ui/*": ["./src/app/ui/*"]
+		},
+		"types": ["node"],
+		// Emit
+		"declaration": false,
+		"downlevelIteration": true,
+		"importHelpers": true,
+		"outDir": "./dist",
+		"sourceMap": true,
+		// JavaScript Support
+		"allowJs": true,
+		// Editor Support
+		// Interop Constraints
+		"forceConsistentCasingInFileNames": true,
+		// Backwards Compatibility
+		// Language And Environment
+		"experimentalDecorators": true,
+		"lib": ["ES2022","dom"],
+		"target": "ES2022",
+		"useDefineForClassFields": false
+		// Compiler Diagnostics
+		// Projects
+		// Output Formatting
+		// Completeness
+		// Command Line
+		// Watch Options
 	},
 	"exclude": [
 		"**/*.spec.ts",
