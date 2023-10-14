@@ -1,12 +1,13 @@
-import {Component} from '@angular/core'
-import {CommonModule} from '@angular/common'
-import {HeaderComponent} from '../../ui/header/header.component.js'
+import { Component } from '@angular/core'
+
+import { HamburgerButtonComponent } from '@dcorg/ui/hamburger-button/hamburger-button.component'
+import { HeaderComponent } from '@dcorg/ui/header/header.component'
 
 @Component({
+	imports: [HamburgerButtonComponent, HeaderComponent],
 	selector: 'dcorg-shell',
 	standalone: true,
-	templateUrl: './shell.component.html',
 	styleUrls: ['./shell.component.css'],
-	imports: [HeaderComponent]
+	templateUrl: './shell.component.html'
 })
 export class ShellComponent {}
