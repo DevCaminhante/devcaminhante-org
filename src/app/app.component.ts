@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
 
+import { Constants } from '@dcorg/core/constants/constants'
+
 @Component({
 	imports: [CommonModule, RouterOutlet],
 	selector: 'dcorg-app',
@@ -10,5 +12,5 @@ import { RouterOutlet } from '@angular/router'
 	templateUrl: './app.component.html'
 })
 export class AppComponent {
-	title = 'devcaminhante-org'
+	projectName = Constants.PROJECT_NAME
 }
