@@ -1,11 +1,11 @@
-import {Component} from '@angular/core'
-import {CommonModule} from '@angular/common'
+import { CommonModule } from '@angular/common'
+import { Component } from '@angular/core'
 
 @Component({
+	imports: [CommonModule],
 	selector: 'dcorg-header',
 	standalone: true,
-	imports: [CommonModule],
-	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.css']
+	styleUrls: ['./header.component.css'],
+	templateUrl: './header.component.html'
 })
 export class HeaderComponent {}
