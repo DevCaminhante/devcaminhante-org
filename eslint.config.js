@@ -153,7 +153,7 @@ export default [
 			'new-cap': [
 				'error',
 				{
-					capIsNewExceptions: ['Component']
+					capIsNewExceptions: ['HostBinding', 'Component']
 				}
 			],
 			'no-alert': ['error'],
