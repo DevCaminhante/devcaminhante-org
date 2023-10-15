@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { Component, HostBinding } from '@angular/core'
 
 @Component({
 	imports: [CommonModule],
@@ -9,5 +9,6 @@ import { Component } from '@angular/core'
 	templateUrl: './hamburger-button.component.html'
 })
 export class HamburgerButtonComponent {
-	a = ''
+	isHidden = false
+	@HostBinding('class') class = 'abs right:10 top:5'
 }
