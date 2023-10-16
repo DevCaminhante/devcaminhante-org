@@ -153,7 +153,12 @@ export default [
 			'new-cap': [
 				'error',
 				{
-					capIsNewExceptions: ['HostBinding', 'Component']
+					capIsNewExceptions: [
+						'Component',
+						'HostBinding',
+						'HostListener',
+						'Injectable'
+					]
 				}
 			],
 			'no-alert': ['error'],
