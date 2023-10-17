@@ -1,3 +1,6 @@
-<div class="{block;rel;w:50;my:7;bg:black;h:6;border-radius:50;~duration:0.5s}>span [hidden]" [hidden]="isHidden">
-	<span [id]="i" class="" *ngFor="let slice of [1, 2, 3]; let i = index"></span>
+<div class="{block;rel;w:50;my:7;bg:black;h:6;border-radius:50;~duration:0.5s}>span"
+		 (click)="onHamburgerButtonClick()">
+	<span id="slice-{{i}}"
+				*ngFor="let slice of [1, 2, 3]; let i = index">
+	</span>
 </div>
