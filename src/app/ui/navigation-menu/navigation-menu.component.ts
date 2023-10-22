@@ -9,7 +9,7 @@ import { HeaderStateService } from '@dcorg/core/services/header-state.service'
 	imports: [CommonModule],
 	selector: 'dcorg-navigation-menu',
 	standalone: true,
-	styleUrls: ['./navigation-menu.component.css'],
+	styles: [],
 	templateUrl: './navigation-menu.component.html'
 })
 export class NavigationMenuComponent implements DoCheck {

@@ -7,7 +7,7 @@ import { HeaderStateService } from '@dcorg/core/services/header-state.service'
 	imports: [CommonModule],
 	selector: 'dcorg-hamburger-button',
 	standalone: true,
-	styleUrls: ['./hamburger-button.component.css'],
+	styles: [],
 	templateUrl: './hamburger-button.component.html'
 })
 export class HamburgerButtonComponent {

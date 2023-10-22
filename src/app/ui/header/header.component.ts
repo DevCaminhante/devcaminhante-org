@@ -12,7 +12,7 @@ import { NavigationMenuComponent } from '@dcorg/ui/navigation-menu/navigation-me
 	],
 	selector: 'dcorg-header',
 	standalone: true,
-	styleUrls: ['./header.component.css'],
+	styles: [],
 	templateUrl: './header.component.html'
 })
 export class HeaderComponent {}

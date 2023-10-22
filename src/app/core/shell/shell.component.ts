@@ -6,7 +6,7 @@ import { HeaderComponent } from '@dcorg/ui/header/header.component'
 	imports: [HeaderComponent],
 	selector: 'dcorg-shell',
 	standalone: true,
-	styleUrls: ['./shell.component.css'],
+	styles: [],
 	templateUrl: './shell.component.html'
 })
 export class ShellComponent {}

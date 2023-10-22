@@ -8,7 +8,7 @@ import { Constants } from '@dcorg/core/constants/constants'
 	imports: [CommonModule, RouterOutlet],
 	selector: 'dcorg-app',
 	standalone: true,
-	styleUrls: ['./app.component.css'],
+	styles: [],
 	templateUrl: './app.component.html'
 })
 export class AppComponent {
