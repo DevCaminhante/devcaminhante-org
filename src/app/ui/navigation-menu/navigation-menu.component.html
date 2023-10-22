@@ -1,8 +1,9 @@
 <nav [hidden]="isHidden">
 	<ul class="text:center list-style:none p:0 mt:-30 font:25 {flex;abs;right:10;top:38}@md">
-		<li class="bb:2|black:not(:nth(4))@<md mx:5@md">Home</li>
-		<li class="bb:2|black:not(:nth(4))@<md mx:5@md">Blog</li>
-		<li class="bb:2|black:not(:nth(4))@<md mx:5@md">Caminhada Dev</li>
-		<li class="bb:2|black:not(:nth(4))@<md mx:5@md">Sobre</li>
+		<!-- I've tried to use ngFor with routerLink but it didn't work, so I couldn't avoid repeation here -->
+		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.HOME}}">{{RouteTitle.HOME}}</li>
+		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.BLOG}}">{{RouteTitle.BLOG}}</li>
+		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.CAMINHADA_DEV}}">{{RouteTitle.CAMINHADA_DEV}}</li>
+		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.SOBRE}}">{{RouteTitle.SOBRE}}</li>
 	</ul>
 </nav>

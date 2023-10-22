@@ -1,18 +1,19 @@
-import { CommonModule } from '@angular/common'
-import { Component, HostBinding, inject } from '@angular/core'
+import { NgForOf } from '@angular/common'
+import { ChangeDetectionStrategy, Component, HostBinding, inject } from '@angular/core'
 
 import { HeaderStateService } from '@dcorg/core/services/header-state.service'
 
 @Component({
-	imports: [CommonModule],
+	changeDetection: ChangeDetectionStrategy.OnPush,
+	imports: [NgForOf],
 	selector: 'dcorg-hamburger-button',
 	standalone: true,
 	styles: [],
 	templateUrl: './hamburger-button.component.html'
 })
 export class HamburgerButtonComponent {
-	private headerStateService = inject(HeaderStateService)
 	@HostBinding('class') class = 'abs right:10 top:5 hide@md'
+	private headerStateService = inject(HeaderStateService)
 
 	onHamburgerButtonClick() {
 		this.headerStateService.changeNavigationMenuVisibility()
