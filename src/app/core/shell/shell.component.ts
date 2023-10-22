@@ -1,9 +1,16 @@
-import { Component } from '@angular/core'
+import { RouterOutlet } from '@angular/router'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 
-import { HeaderComponent } from '@dcorg/ui/header/header.component'
+import { HeaderComponent } from '@dcorg/core/shell/header/header.component'
+import { HomeComponent } from '../../routes/home/home.component'
 
 @Component({
-	imports: [HeaderComponent],
+	changeDetection: ChangeDetectionStrategy.OnPush,
+	imports: [
+		HomeComponent,
+		HeaderComponent,
+		RouterOutlet
+	],
 	selector: 'dcorg-shell',
 	standalone: true,
 	styles: [],
