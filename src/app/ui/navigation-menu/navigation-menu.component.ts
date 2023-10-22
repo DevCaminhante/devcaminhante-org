@@ -2,7 +2,7 @@
 import { CommonModule } from '@angular/common'
 import { Component, DoCheck, HostListener, inject } from '@angular/core'
 
-import { Constants } from '@dcorg/core/constants/constants'
+import { GlobalConstants } from '@dcorg/core/constants/constants'
 import { HeaderStateService } from '@dcorg/core/services/header-state.service'
 
 @Component({
@@ -20,7 +20,7 @@ export class NavigationMenuComponent implements DoCheck {
 	ngDoCheck() {
 		this.isHidden = this.headerStateService.isNavigationMenuHidden()
 
-		if (window.innerWidth >= Constants.WINDOW_WIDTH && this.isHidden) {
+		if (window.innerWidth >= GlobalConstants.WINDOW_WIDTH && this.isHidden) {
 			this.isHidden = false
 		}
 	}
