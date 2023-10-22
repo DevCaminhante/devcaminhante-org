@@ -18,6 +18,7 @@ const allExtensions = [
 
 export default [
 	{
+		ignores: ['dist/*'],
 		rules: {
 			...javaScriptPlugin.configs.recommended.rules,
 
@@ -157,7 +158,9 @@ export default [
 						'Component',
 						'HostBinding',
 						'HostListener',
-						'Injectable'
+						'Injectable',
+						'Input',
+						'Output'
 					]
 				}
 			],
@@ -311,7 +314,14 @@ export default [
 			'no-useless-return': ['error'],
 			'no-var': ['error'],
 			'no-void': ['error'],
-			'object-shorthand': ['error', 'never'],
+			'object-shorthand': [
+				'error',
+				'always',
+				{
+					avoidExplicitReturnArrows: true,
+					avoidQuotes: true
+				}
+			],
 			'one-var': ['error', 'never'],
 			'operator-assignment': ['error', 'never'],
 			'prefer-arrow-callback': [
