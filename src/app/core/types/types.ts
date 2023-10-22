@@ -1,5 +1,8 @@
 import { Input } from 'valibot'
 
-import { HeaderStateSchema } from '@dcorg/core/schemas/schemas'
+import { Schemas } from '@dcorg/core/schemas/schemas'
 
-export type HeaderState = Input<typeof HeaderStateSchema>
+export const SchemasForTypes = Schemas
+
+export type HeaderState = Input<typeof SchemasForTypes.HeaderStateSchema>
+export type Article = Input<typeof SchemasForTypes.ArticleSchema>
