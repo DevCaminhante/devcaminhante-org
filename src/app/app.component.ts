@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 
 import { GlobalConstants } from '@dcorg/core/constants/constants'
 
 @Component({
-	imports: [CommonModule, RouterOutlet],
+	changeDetection: ChangeDetectionStrategy.OnPush,
+	imports: [RouterOutlet],
 	selector: 'dcorg-app',
 	standalone: true,
 	styles: [],

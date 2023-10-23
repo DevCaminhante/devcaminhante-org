@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "build": "ng build",
     "build:dev": "ng build --configuration development",
-    "serve:prod": "ng serve --configuration production",
+    "serve:prod": "npx lite-server --baseDir='dist'",
     "test": "ng test"
   },
   "dependencies": {
