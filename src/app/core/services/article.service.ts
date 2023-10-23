@@ -18,7 +18,7 @@ export class ArticleService {
 		let id = GlobalConstants.FIRST_ID
 
 		return this.urls.map((url) => {
-			return this.httpClient.get(`blog/posts/${url}.md`, { responseType: 'text' })
+			return this.httpClient.get(`blog/articles/${url}.md`, { responseType: 'text' })
 				.pipe(map((string): Article => {
 					const parsedString = {
 						author: string.split('author: \'')[1].split('\'\n')[0],

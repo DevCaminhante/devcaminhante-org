@@ -23,7 +23,7 @@
 						"assets": [
 							"src/favicon.ico",
 							"src/assets",
-							"src/blog/posts"
+							"src/blog/articles"
 						],
 						"styles": [
 							"src/styles.css"
@@ -86,7 +86,7 @@
 						"assets": [
 							"src/favicon.ico",
 							"src/assets",
-							"src/blog/posts"
+							"src/blog/articles"
 						],
 						"styles": [
 							"src/styles.css"
