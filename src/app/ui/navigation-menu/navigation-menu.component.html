@@ -3,7 +3,7 @@
 		<!-- I've tried to use ngFor with routerLink but it didn't work, so I couldn't avoid repeation here -->
 		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.HOME}}">{{RouteTitle.HOME}}</li>
 		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.BLOG}}">{{RouteTitle.BLOG}}</li>
-		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.CAMINHADA_DEV}}">{{RouteTitle.CAMINHADA_DEV}}</li>
-		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.SOBRE}}">{{RouteTitle.SOBRE}}</li>
+		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.CAMINHADA_DEV}}" hidden>{{RouteTitle.CAMINHADA_DEV}}</li>
+		<li class="bb:2|black:not(:nth(4))@<md mx:5@md" routerLink="/{{Route.SOBRE}}" hidden>{{RouteTitle.SOBRE}}</li>
 	</ul>
 </nav>
