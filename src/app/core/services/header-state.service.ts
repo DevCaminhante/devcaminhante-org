@@ -1,4 +1,3 @@
-/* eslint-disable no-undefined */
 import { computed, Injectable, signal } from '@angular/core'
 
 import { HeaderState } from '@dcorg/core/types/types'
@@ -8,6 +7,7 @@ import { HeaderState } from '@dcorg/core/types/types'
 })
 export class HeaderStateService {
 	state = signal<HeaderState>({
+		// eslint-disable-next-line no-undefined
 		isNavigationMenuHidden: undefined
 	})
 	isNavigationMenuHidden = computed(() => {

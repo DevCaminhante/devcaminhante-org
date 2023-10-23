@@ -1,0 +1,15 @@
+<main>
+	<h1 class="text:center">Articles</h1>
+	<div *ngFor="let article$ of article$">
+		<div *ngIf="article$ | async as article; else loading">
+			<a [routerLink]="['/blog/article/', article.slug]">{{ article.title }}</a>
+			<span class="block">por {{ article.author }} em {{ article.date | date: 'dd/MM/yyyy' }}</span>
+		</div>
+	</div>
+	
+	<router-outlet></router-outlet>
+</main>
+
+<ng-template #loading>
+	<h1 class="text:center">Carregando...</h1>
+</ng-template>

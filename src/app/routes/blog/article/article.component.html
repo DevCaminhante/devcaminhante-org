@@ -1,0 +1,9 @@
+<main *ngIf="article$ | async as article; else loading">
+	<h1>{{article.title}}</h1>
+	<span class="block font:small-caption">por {{ article.author }} em {{ article.date | date: 'dd/MM/yyyy' }}</span>
+	<markdown class="{m:20}>p" [data]="article.content"></markdown>
+</main>
+
+<ng-template #loading>
+	<h1 class="text:center">Carregando...</h1>
+</ng-template>
