@@ -31,6 +31,7 @@
     "@techor/extend": "^2.5.17",
     "csstype": "^3.1.2",
     "globals": "^13.23.0",
+    "marked": "^9.1.2",
     "ngx-markdown": "^16.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -68,6 +69,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.1.6"
   }
 }
