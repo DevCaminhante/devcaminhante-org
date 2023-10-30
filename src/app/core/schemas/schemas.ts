@@ -6,7 +6,9 @@ import { HeaderStateSchema } from './header-state.schema'
 import { RouteSchema, RouteTitleSchema } from './route.schema'
 
 const GlobalConstantSchema = object({
-	firstId: literal(1),
+	articleContentFirstLineIndex: literal(6),
+	firstArticleId: literal(1),
+	lessOrMoreOneWholeNumber: literal(1),
 	orgName: literal('DevCaminhante'),
 	projectName: literal('devcaminhante-org'),
 	undefinedNumber: literal(0),
