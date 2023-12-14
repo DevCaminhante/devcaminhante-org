@@ -7,9 +7,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
   imports: [NxWelcomeComponent, RouterModule],
   selector: 'dcorg-root',
 	template: `
-		<dcorg-nx-welcome></dcorg-nx-welcome>
-
-		<router-outlet></router-outlet>
+			<router-outlet></router-outlet>
 	`,
   styles: '',
 })
