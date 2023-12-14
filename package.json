@@ -20,6 +20,7 @@
     "@angular/router": "~17.0.0",
     "@angular/ssr": "~17.0.0",
     "@nx/angular": "17.2.4",
+    "cirrus-ui": "0.7.1",
     "express": "~4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
