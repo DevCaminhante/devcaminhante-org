@@ -1,17 +1,23 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router'
 
 import { HeaderComponent } from './header.component';
-import { MainComponent } from './main.component'
 
 @Component({
 	selector: 'dcorg-shell',
 	standalone: true,
-	imports: [CommonModule, HeaderComponent, MainComponent],
+	imports: [
+		CommonModule,
+		HeaderComponent,
+		RouterOutlet
+	],
 	template: `
 		<dcorg-header></dcorg-header>
-		
-		<dcorg-main></dcorg-main>
+
+		<div class="mt-8 mx-3 u-center u-text-justify">
+			<router-outlet></router-outlet>
+		</div>
 	`,
 	styles: ``,
 	changeDetection: ChangeDetectionStrategy.OnPush,
