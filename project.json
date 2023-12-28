@@ -2,7 +2,7 @@
   "name": "devcaminhante-org",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "devcaminhante-org",
+  "prefix": "dcorg",
   "sourceRoot": "./src",
   "tags": [],
   "targets": {

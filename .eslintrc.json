@@ -1,37 +1,37 @@
 {
-  "root": true,
-  "ignorePatterns": ["!**/*"],
-  "plugins": ["@nx"],
-  "overrides": [
-    {
-      "files": ["*.ts"],
-      "extends": [
-        "plugin:@nx/angular",
-        "plugin:@angular-eslint/template/process-inline-templates"
-      ],
-      "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "devcaminhanteOrg",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "devcaminhante-org",
-            "style": "kebab-case"
-          }
-        ]
-      }
-    },
-    {
-      "files": ["*.html"],
-      "extends": ["plugin:@nx/angular-template"],
-      "rules": {}
-    }
-  ]
+	"root": true,
+	"ignorePatterns": ["!**/*"],
+	"plugins": ["@nx"],
+	"overrides": [
+		{
+			"files": ["*.ts"],
+			"extends": [
+				"plugin:@nx/angular",
+				"plugin:@angular-eslint/template/process-inline-templates"
+			],
+			"rules": {
+				"@angular-eslint/directive-selector": [
+					"error",
+					{
+						"type": "attribute",
+						"prefix": "dcorg",
+						"style": "camelCase"
+					}
+				],
+				"@angular-eslint/component-selector": [
+					"error",
+					{
+						"type": "element",
+						"prefix": "dcorg",
+						"style": "kebab-case"
+					}
+				]
+			}
+		},
+		{
+			"files": ["*.html"],
+			"extends": ["plugin:@nx/angular-template"],
+			"rules": {}
+		}
+	]
 }
