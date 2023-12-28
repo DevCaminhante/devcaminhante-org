@@ -1,16 +1,14 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
-  standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'dcorg-root',
-	template: `
-			<router-outlet></router-outlet>
-	`,
-  styles: '',
+	selector: 'dcorg-root',
+	standalone: true,
+	imports: [RouterModule],
+	template: `<router-outlet></router-outlet>`,
+	styles: '',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'devcaminhante-org';
+	title = 'devcaminhante-org';
 }
