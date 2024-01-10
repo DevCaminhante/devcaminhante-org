@@ -32,29 +32,34 @@ export function app(): express.Express {
 
 	// All regular routes use the Angular engine
 	server.get('*', (req, res, next) => {
-		const {protocol, originalUrl, baseUrl, headers} = req
+		const {baseUrl, headers, originalUrl, protocol} = req
 
 		commonEngine
 			.render({
 				bootstrap,
 				documentFilePath: indexHtml,
 				url: `${protocol}://${headers.host}${originalUrl}`,
+				// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 				publicPath: browserDistFolder,
+				// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 				providers: [{provide: APP_BASE_HREF, useValue: baseUrl}]
 			})
 			.then((html) => res.send(html))
-			.catch((err) => next(err))
+			.catch((error) => next(error))
 	})
 
 	return server
 }
 
+// eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error
+// @ts-ignore
 function run(): void {
 	const port = process.env['PORT'] || 4000
 
 	// Start up the Node server
 	const server = app()
 	server.listen(port, () => {
+		// eslint-disable-next-line no-console
 		console.log(`Node Express server listening on http://localhost:${port}`)
 	})
 }

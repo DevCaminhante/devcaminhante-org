@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default {
 	displayName: 'devcaminhante-org',
 	preset: './jest.preset.js',

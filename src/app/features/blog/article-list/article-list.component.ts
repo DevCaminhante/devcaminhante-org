@@ -4,6 +4,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core'
 @Component({
 	selector: 'dcorg-article-list',
 	standalone: true,
+	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	imports: [CommonModule],
 	template: `
 		<h2 class="u-center">Articles</h2>
@@ -12,7 +13,9 @@ import {ChangeDetectionStrategy, Component} from '@angular/core'
 		<p>Article's title</p>
 		}
 	`,
+	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	styles: ``,
+	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArticleListComponent {

@@ -4,6 +4,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core'
 @Component({
 	selector: 'dcorg-home',
 	standalone: true,
+	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	imports: [CommonModule],
 	template: `
 		<p>
@@ -16,7 +17,10 @@ import {ChangeDetectionStrategy, Component} from '@angular/core'
 			aprendizes. :)
 		</p>
 	`,
+	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	styles: ``,
+	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 export class HomeComponent {}

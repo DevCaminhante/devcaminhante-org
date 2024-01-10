@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 // @ts-check
 
 /** @type {import("@ianvs/prettier-plugin-sort-imports").PrettierConfig} */

@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 import {Route} from '@angular/router'
 
 export const blogRoutes: Route[] = [
