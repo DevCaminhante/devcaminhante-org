@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@use "cirrus-ui/src/cirrus-ext" as * with (
+@use 'cirrus-ui/src/cirrus-ext' as * with (
 	$config: (
 		excludes: (
 			// Core Components
@@ -12,7 +12,6 @@
 			'LISTS',
 			'PROGRESS',
 			'TABLE',
-
 			// Extended Components
 			'ACCORDION',
 			'AVATAR',
@@ -28,7 +27,6 @@
 			'TILES',
 			'TOAST',
 			'TOOLTIPS',
-			
 			// Utilities
 			'ABSOLUTE',
 			'BLUR',
@@ -42,48 +40,48 @@
 			'POSITION',
 			'SHADOWS',
 			'TRANSITIONS',
-			'ZINDEX',
-			),
-			viewports: (
-            CLEARFIX: false,
-            DISPLAY: false,
-            FLEX: false,
-            FLOAT: false,
-            OVERFLOW: false,
-            POSITION: false,
-            TEXT: false,
-            MARGIN-PADDING: false,
-            OPACITY: false,
-            BACKGROUND-OPACITY: false,
-            COLOR-OPACITY: false,
-            BORDER-OPACITY: false,
-            WIDTHS: false,
-            HEIGHTS: false,
-            ZINDEX: false,
-            ABSOLUTES: false,
-            GAP: false,
-            MIN-HEIGHT: false,
-            MAX-HEIGHT: false,
-            MIN-WIDTH: false,
-            MAX-WIDTH: false,
-            GRID: false,
-            ROUND: false,
-            SHADOWS: false,
-            LETTER-SPACING: false,
-            BLUR: false,
-            TRANSITION-DURATION: false,
-            LINE-HEIGHT: false,
-            BORDER-WIDTH: false,
-            VERTICAL-ALIGN: false,
-        ),
-			extend: (
-				colors: (
+			'ZINDEX'
+		),
+		viewports: (
+			CLEARFIX: false,
+			DISPLAY: false,
+			FLEX: false,
+			FLOAT: false,
+			OVERFLOW: false,
+			POSITION: false,
+			TEXT: false,
+			MARGIN-PADDING: false,
+			OPACITY: false,
+			BACKGROUND-OPACITY: false,
+			COLOR-OPACITY: false,
+			BORDER-OPACITY: false,
+			WIDTHS: false,
+			HEIGHTS: false,
+			ZINDEX: false,
+			ABSOLUTES: false,
+			GAP: false,
+			MIN-HEIGHT: false,
+			MAX-HEIGHT: false,
+			MIN-WIDTH: false,
+			MAX-WIDTH: false,
+			GRID: false,
+			ROUND: false,
+			SHADOWS: false,
+			LETTER-SPACING: false,
+			BLUR: false,
+			TRANSITION-DURATION: false,
+			LINE-HEIGHT: false,
+			BORDER-WIDTH: false,
+			VERTICAL-ALIGN: false
+		),
+		extend: (
+			colors: (
 				extended: (
 					'purple': (
-						'dcorg': #460f6c,
+						'dcorg': #460f6c
 					)
 				)
 			)
-		),
+		)
 	)
 );

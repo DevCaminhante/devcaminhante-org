@@ -1,17 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router'
+import {CommonModule} from '@angular/common'
+import {ChangeDetectionStrategy, Component} from '@angular/core'
+import {RouterOutlet} from '@angular/router'
 
-import { HeaderComponent } from './header.component';
+import {HeaderComponent} from './header.component'
 
 @Component({
 	selector: 'dcorg-shell',
 	standalone: true,
-	imports: [
-		CommonModule,
-		HeaderComponent,
-		RouterOutlet
-	],
+	imports: [CommonModule, HeaderComponent, RouterOutlet],
 	template: `
 		<dcorg-header></dcorg-header>
 
@@ -20,6 +16,6 @@ import { HeaderComponent } from './header.component';
 		</div>
 	`,
 	styles: ``,
-	changeDetection: ChangeDetectionStrategy.OnPush,
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShellComponent {}

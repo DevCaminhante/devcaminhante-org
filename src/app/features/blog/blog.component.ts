@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterModule } from '@angular/router'
+import {ChangeDetectionStrategy, Component} from '@angular/core'
+import {RouterModule} from '@angular/router'
 
 @Component({
 	selector: 'dcorg-blog',
@@ -7,6 +7,6 @@ import { RouterModule } from '@angular/router'
 	imports: [RouterModule],
 	template: `<router-outlet></router-outlet>`,
 	styles: ``,
-	changeDetection: ChangeDetectionStrategy.OnPush,
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlogComponent {}

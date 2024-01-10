@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common'
+import {ChangeDetectionStrategy, Component} from '@angular/core'
 
 @Component({
 	selector: 'dcorg-article-list',
@@ -9,12 +9,12 @@ import { CommonModule } from '@angular/common';
 		<h2 class="u-center">Articles</h2>
 
 		@for (article of articles; track article) {
-			<p>Article's title</p>
+		<p>Article's title</p>
 		}
 	`,
 	styles: ``,
-	changeDetection: ChangeDetectionStrategy.OnPush,
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArticleListComponent {
-	articles = [1, 2, 3];
+	articles = [1, 2, 3]
 }
