@@ -1,5 +1,10 @@
 // @ts-check
 
 module.exports = {
-	extends: ['@nkzw']
+	extends: ['@nkzw'],
+	settings: {
+		'import/resolver': {
+			typescript: {}
+		}
+	}
 }
