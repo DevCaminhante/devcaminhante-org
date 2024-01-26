@@ -10,13 +10,21 @@
 			"executor": "@angular-devkit/build-angular:application",
 			"outputs": ["{options.outputPath}"],
 			"options": {
-				"outputPath": "dist/devcaminhante-org",
+				"outputPath": "dist",
 				"index": "./src/index.html",
 				"browser": "./src/main.ts",
 				"polyfills": ["zone.js"],
 				"tsConfig": "./tsconfig.app.json",
 				"inlineStyleLanguage": "scss",
-				"assets": ["./src/favicon.ico", "./src/assets"],
+				"assets": [
+					"./src/favicon.ico",
+					"./src/assets",
+					{
+						"glob": "*.md",
+						"input": "./src/app/features/blog/article-list/articles",
+						"output": "./articles"
+					}
+				],
 				"styles": ["./src/styles.scss"],
 				"scripts": [],
 				"server": "src/main.server.ts",
@@ -48,6 +56,14 @@
 				}
 			},
 			"defaultConfiguration": "production"
+		},
+		"copy-assets": {
+			"executor": "nx:run-commands",
+			"options": {
+				"commands": [
+					"shx rm -rf ./dist && shx mkdir -p ./dist/browser/ && shx cp -r ./src/app/features/blog/article-list/articles ./dist/browser/"
+				]
+			}
 		},
 		"serve": {
 			"executor": "@angular-devkit/build-angular:dev-server",
@@ -84,8 +100,8 @@
 		"serve-static": {
 			"executor": "@nx/web:file-server",
 			"options": {
-				"buildTarget": "devcaminhante-org:build",
-				"staticFilePath": "dist/devcaminhante-org/browser"
+				"buildTarget": ["devcaminhante-org:build"],
+				"staticFilePath": "dist/browser"
 			}
 		}
 	}
