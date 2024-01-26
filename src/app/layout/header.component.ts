@@ -34,7 +34,7 @@ import {RouterLink, RouterLinkActive} from '@angular/router'
 							>Home</a
 						>
 					</div>
-					<div class="nav-item">
+					<div class="nav-item active">
 						<a
 							routerLink="/blog"
 							routerLinkActive="active"
@@ -42,14 +42,14 @@ import {RouterLink, RouterLinkActive} from '@angular/router'
 							>Blog</a
 						>
 					</div>
-					<div class="nav-item">
-						<a
-							routerLink="/sobre"
-							routerLinkActive="active"
-							ariaCurrentWhenActive="page"
-							>Sobre</a
-						>
-					</div>
+					<!--					<div class="nav-item">-->
+					<!--						<a-->
+					<!--							routerLink="/sobre"-->
+					<!--							routerLinkActive="active"-->
+					<!--							ariaCurrentWhenActive="page"-->
+					<!--							>Sobre</a-->
+					<!--						>-->
+					<!--					</div>-->
 				</div>
 			</div>
 		</div>
