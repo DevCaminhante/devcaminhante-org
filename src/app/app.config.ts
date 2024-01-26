@@ -1,4 +1,4 @@
-import {HttpClient, provideHttpClient} from '@angular/common/http'
+import {HttpClient, provideHttpClient, withFetch} from '@angular/common/http'
 import {ApplicationConfig} from '@angular/core'
 import {provideClientHydration} from '@angular/platform-browser'
 import {
@@ -13,7 +13,7 @@ import {appRoutes} from './app.routes'
 
 export const appConfig: ApplicationConfig = {
 	providers: [
-		provideHttpClient(),
+		provideHttpClient(withFetch()),
 		provideClientHydration(),
 		provideRouter(
 			appRoutes,
