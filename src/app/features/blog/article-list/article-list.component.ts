@@ -8,22 +8,20 @@ import {RouterLink} from '@angular/router'
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	imports: [CommonModule, RouterLink],
 	template: `
-		<div>
-			<h2 class="u-center">Articles</h2>
+		<h2 class="u-center">Articles</h2>
 
-			@for (article of articles; track $index) {
-			<h3 class="u-center u-text-center">
-				<a
-					[routerLink]="['/blog/articles', article.slug]"
-					[state]="{article: article}"
-					>{{ article.title }}</a
-				>
-			</h3>
-			<h6 class="u-center">
-				em {{ article.date | date }} por {{ article.author }}
-			</h6>
-			}
-		</div>
+		@for (article of articles; track $index) {
+		<h3 class="u-center u-text-center">
+			<a
+				[routerLink]="['/blog/articles', article.slug]"
+				[state]="{article: article}"
+				>{{ article.title }}</a
+			>
+		</h3>
+		<h6 class="u-center">
+			em {{ article.date | date }} por {{ article.author }}
+		</h6>
+		}
 	`,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	styles: ``,

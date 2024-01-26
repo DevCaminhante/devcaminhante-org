@@ -12,12 +12,13 @@ import {MarkdownPreviewerComponent} from '../../../shared/components/markdown-pr
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	imports: [CommonModule, MarkdownPreviewerComponent],
 	template: `
-		<div *ngIf="article$ | async as article">
-			<h3 class="u-center pb-2 u-text-center">{{ article.title }}</h3>
-			<dcorg-markdown-previewer
-				file="./articles/{{ article.slug }}.md"
-			></dcorg-markdown-previewer>
-		</div>
+		@if (article$ | async; as article) {
+		<h3 class="u-center pb-2 u-text-center">{{ article.title }}</h3>
+
+		<dcorg-markdown-previewer
+			file="./articles/{{ article.slug }}.md"
+		></dcorg-markdown-previewer>
+		}
 	`,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	styles: ``,
@@ -38,7 +39,9 @@ export class ArticleDetailsComponent implements OnInit {
 
 	ngOnInit() {
 		this.article$ = this.activatedRoute.paramMap.pipe(
-			map(() => window.history.state['article'])
+			map(() =>
+				typeof window !== 'undefined' ? window.history.state['article'] : ''
+			)
 		)
 	}
 }
