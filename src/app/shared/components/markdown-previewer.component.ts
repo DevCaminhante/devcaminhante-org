@@ -8,12 +8,12 @@ import {MarkdownComponent} from 'ngx-markdown'
 	standalone: true,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	imports: [CommonModule, MarkdownComponent],
-	template: ` <markdown [src]="file"></markdown> `,
+	template: ` <markdown [src]="filenameWithoutExtension"></markdown> `,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	styles: ``,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MarkdownPreviewerComponent {
-	@Input() file = ''
+	@Input() filenameWithoutExtension = ''
 }

@@ -1,6 +1,8 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import {Route} from '@angular/router'
 
+import {Article} from '../../core/types/types'
+
 const blogArticleData = {
 	articles: [
 		{
@@ -9,7 +11,7 @@ const blogArticleData = {
 			slug: '2021-07-07_e-nos-tornamos-devcaminhantes',
 			title: '...E nos tornamos DevCaminhantes'
 		}
-	]
+	] as Article[]
 }
 
 export const blogRoutes: Route[] = [

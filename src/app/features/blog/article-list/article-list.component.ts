@@ -2,6 +2,8 @@ import {CommonModule} from '@angular/common'
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core'
 import {RouterLink} from '@angular/router'
 
+import {Article} from '../../../core/types/types'
+
 @Component({
 	selector: 'dcorg-article-list',
 	standalone: true,
@@ -30,5 +32,5 @@ import {RouterLink} from '@angular/router'
 })
 export class ArticleListComponent {
 	@Input()
-	articles: {author: string; date: string; slug: string; title: string}[] = []
+	articles: Article[] = []
 }

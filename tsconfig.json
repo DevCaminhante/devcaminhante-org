@@ -14,10 +14,7 @@
 		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
 		"importHelpers": true,
-		"lib": [
-			"es2020",
-			"dom"
-		],
+		"lib": ["es2020", "dom"],
 		"module": "esnext",
 		"moduleResolution": "node",
 		"noFallthroughCasesInSwitch": true,
@@ -34,10 +31,7 @@
 		"target": "es2022",
 		"useDefineForClassFields": false
 	},
-	"exclude": [
-		"node_modules",
-		"tmp"
-	],
+	"exclude": ["node_modules", "tmp"],
 	"files": [],
 	"include": [],
 	"references": [

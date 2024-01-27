@@ -14,7 +14,6 @@
 		"lint:fix": "eslint --fix .",
 		"lint:staged": "eslint --cache .",
 		"lint:fix-staged": "eslint --cache --fix .",
-		"prepare": "concurrently --kill-others-on-fail \"pnpm:format:check\" \"pnpm:lint\"",
 		"prepare:apply": "concurrently --kill-others-on-fail \"pnpm:format:write\" \"pnpm:lint:fix\"",
 		"test": "nx test"
 	},
@@ -37,6 +36,7 @@
 		"ngx-markdown": "17.1.1",
 		"rxjs": "~7.8.0",
 		"tslib": "^2.3.0",
+		"valibot": "^0.27.0",
 		"zone.js": "~0.14.0"
 	},
 	"devDependencies": {

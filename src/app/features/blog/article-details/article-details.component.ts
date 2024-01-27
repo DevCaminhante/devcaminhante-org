@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router'
 
 import {map, Observable} from 'rxjs'
 
+import {Article} from '../../../core/types/types'
 import {MarkdownPreviewerComponent} from '../../../shared/components/markdown-previewer.component'
 
 @Component({
@@ -16,7 +17,7 @@ import {MarkdownPreviewerComponent} from '../../../shared/components/markdown-pr
 		<h3 class="u-center pb-2 u-text-center">{{ article.title }}</h3>
 
 		<dcorg-markdown-previewer
-			file="./articles/{{ article.slug }}.md"
+			filenameWithoutExtension="./articles/{{ article.slug }}.md"
 		></dcorg-markdown-previewer>
 		}
 	`,
@@ -26,15 +27,7 @@ import {MarkdownPreviewerComponent} from '../../../shared/components/markdown-pr
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArticleDetailsComponent implements OnInit {
-	article$:
-		| Observable<{
-				author: string
-				date: string
-				slug: string
-				title: string
-				// eslint-disable-next-line no-mixed-spaces-and-tabs
-		  }>
-		| undefined
+	article$: Observable<Article> | undefined
 	private activatedRoute = inject(ActivatedRoute)
 
 	ngOnInit() {

@@ -56,6 +56,9 @@ dependencies:
   tslib:
     specifier: ^2.3.0
     version: 2.6.2
+  valibot:
+    specifier: ^0.27.0
+    version: 0.27.0
   zone.js:
     specifier: ~0.14.0
     version: 0.14.2
@@ -14936,6 +14939,10 @@ packages:
       '@jridgewell/trace-mapping': 0.3.20
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
+
+  /valibot@0.27.0:
+    resolution: {integrity: sha512-1Wv0FfiosoAYruPhueHJgJtgj18KlUoBaIEeCefCEsohStcJQWp3jL59J8Tj9w8jiuQ3USkZGH8BtzDHDGgdxQ==}
+    dev: false
 
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
