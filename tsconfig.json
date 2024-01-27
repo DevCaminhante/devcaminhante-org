@@ -1,29 +1,43 @@
 {
-	"compilerOptions": {
-		"rootDir": ".",
-		"sourceMap": true,
-		"declaration": false,
-		"moduleResolution": "node",
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"importHelpers": true,
-		"target": "es2022",
-		"module": "esnext",
-		"lib": ["es2020", "dom"],
-		"skipLibCheck": true,
-		"skipDefaultLibCheck": true,
-		"baseUrl": ".",
-		"paths": {},
-		"useDefineForClassFields": false,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"strict": true,
-		"noImplicitOverride": true,
-		"noPropertyAccessFromIndexSignature": true,
-		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true,
-		"noUnusedLocals": true
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"strictTemplates": true
 	},
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": ".",
+		"declaration": false,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"forceConsistentCasingInFileNames": true,
+		"importHelpers": true,
+		"lib": [
+			"es2020",
+			"dom"
+		],
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUnusedLocals": true,
+		"paths": {},
+		"rootDir": ".",
+		"skipDefaultLibCheck": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "es2022",
+		"useDefineForClassFields": false
+	},
+	"exclude": [
+		"node_modules",
+		"tmp"
+	],
 	"files": [],
 	"include": [],
 	"references": [
@@ -36,13 +50,5 @@
 		{
 			"path": "./tsconfig.editor.json"
 		}
-	],
-	"compileOnSave": false,
-	"exclude": ["node_modules", "tmp"],
-	"angularCompilerOptions": {
-		"enableI18nLegacyMessageIdFormat": false,
-		"strictInjectionParameters": true,
-		"strictInputAccessModifiers": true,
-		"strictTemplates": true
-	}
+	]
 }
