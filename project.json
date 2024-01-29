@@ -10,7 +10,10 @@
 			"executor": "@angular-devkit/build-angular:application",
 			"outputs": ["{options.outputPath}"],
 			"options": {
-				"outputPath": "dist",
+				"outputPath": {
+					"base": "dist",
+					"browser": ""
+				},
 				"index": "./src/index.html",
 				"browser": "./src/main.ts",
 				"polyfills": ["zone.js"],
@@ -29,9 +32,7 @@
 				"scripts": [],
 				"server": "src/main.server.ts",
 				"prerender": true,
-				"ssr": {
-					"entry": "server.ts"
-				}
+				"ssr": false
 			},
 			"configurations": {
 				"production": {
@@ -61,7 +62,7 @@
 			"executor": "nx:run-commands",
 			"options": {
 				"commands": [
-					"shx rm -rf ./dist && shx mkdir -p ./dist/browser/ && shx cp -r ./src/app/features/blog/article-list/articles ./dist/browser/"
+					"shx rm -rf ./dist && shx mkdir -p ./dist/ && shx cp -r ./src/app/features/blog/article-list/articles ./dist/"
 				]
 			}
 		},
@@ -101,7 +102,7 @@
 			"executor": "@nx/web:file-server",
 			"options": {
 				"buildTarget": ["devcaminhante-org:build"],
-				"staticFilePath": "dist/browser"
+				"staticFilePath": "dist"
 			}
 		}
 	}
