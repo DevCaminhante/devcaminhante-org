@@ -26,7 +26,11 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router'
 
 			<div class="header-nav" id="header-menu">
 				<div class="nav-left">
-					<div class="nav-item" [class.active]="selectedRoute === '/'">
+					<div
+						class="nav-item"
+						[class.active]="selectedRoute === '/'"
+						id="home"
+					>
 						<a
 							routerLink="/"
 							routerLinkActive="active"
@@ -38,6 +42,7 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router'
 					<div
 						class="nav-item"
 						[class.active]="selectedRoute.includes('/blog')"
+						id="blog"
 					>
 						<a
 							routerLink="/blog"
@@ -70,6 +75,26 @@ export class HeaderComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.selectedRoute = this.router.routerState.snapshot.url
+
+		if (typeof window !== 'undefined') {
+			const navigationButtons = document.querySelectorAll('.nav-btn')
+
+			navigationButtons.forEach((element) => {
+				element.addEventListener('click', () => {
+					const headerMenu = document.getElementById('header-menu')
+					const aElementHTMLCollection = document.getElementsByTagName('a')
+					const aElementArray = Array.from(aElementHTMLCollection)
+
+					aElementArray.forEach((aElement) => {
+						aElement.addEventListener('click', () => {
+							headerMenu?.classList.remove('active')
+						})
+					})
+
+					headerMenu?.classList.toggle('active')
+				})
+			})
+		}
 	}
 
 	setSelectedRoute(selectedRoute: string) {
