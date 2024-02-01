@@ -2,6 +2,8 @@ import {CommonModule} from '@angular/common'
 import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core'
 import {Router, RouterLink, RouterLinkActive} from '@angular/router'
 
+import {Constant} from '@app/constants'
+
 @Component({
 	selector: 'dcorg-header',
 	standalone: true,
@@ -70,7 +72,7 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router'
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
-	selectedRoute = ''
+	selectedRoute: string = Constant.EMPTY_STRING
 	private router = inject(Router)
 
 	ngOnInit(): void {

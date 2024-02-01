@@ -1,16 +1,17 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import {Route} from '@angular/router'
 
-import {blogRoutes} from '../features/blog/blog.routes'
-import {HomeComponent} from '../features/home/home.component'
+import {blogRoutes} from '@app/blog/blog.routes'
+import {AppRoute, Constant} from '@app/constants'
+import {HomeComponent} from '@app/home/home.component'
 
 export const shellRoutes: Route[] = [
 	{
-		path: '',
+		path: Constant.EMPTY_STRING,
 		component: HomeComponent
 	},
 	{
-		path: 'blog',
+		path: AppRoute.blog.literal,
 		loadComponent: () =>
 			import('../features/blog/blog.component').then((m) => m.BlogComponent),
 		children: blogRoutes

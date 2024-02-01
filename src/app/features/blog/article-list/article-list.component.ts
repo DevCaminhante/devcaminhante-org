@@ -2,7 +2,7 @@ import {CommonModule} from '@angular/common'
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core'
 import {RouterLink} from '@angular/router'
 
-import {Article} from '../../../core/types/types'
+import {Article} from '@app/types'
 
 @Component({
 	selector: 'dcorg-article-list',

@@ -2,7 +2,7 @@ import {CommonModule} from '@angular/common'
 import {ChangeDetectionStrategy, Component} from '@angular/core'
 import {RouterOutlet} from '@angular/router'
 
-import {HeaderComponent} from './header.component'
+import {HeaderComponent} from '@app/layout/header.component'
 
 @Component({
 	selector: 'dcorg-shell',

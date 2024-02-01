@@ -22,7 +22,16 @@
 		"noImplicitReturns": true,
 		"noPropertyAccessFromIndexSignature": true,
 		"noUnusedLocals": true,
-		"paths": {},
+		"paths": {
+			"@app/constants": ["src/app/core/constants/constants.ts"],
+			"@app/blog/*": ["src/app/features/blog/*"],
+			"@app/home/*": ["src/app/features/home/*"],
+			"@app/layout/*": ["src/app/layout/*"],
+			"@app/schemas": ["src/app/core/schemas/schemas.ts"],
+			"@app/shared/*": ["src/app/shared/*"],
+			"@app/sobre/*": ["src/app/features/sobre/*"],
+			"@app/types": ["src/app/core/types/types.ts"]
+		},
 		"rootDir": ".",
 		"skipDefaultLibCheck": true,
 		"skipLibCheck": true,

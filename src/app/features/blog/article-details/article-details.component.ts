@@ -4,8 +4,8 @@ import {ActivatedRoute} from '@angular/router'
 
 import {map, Observable} from 'rxjs'
 
-import {Article} from '../../../core/types/types'
-import {MarkdownPreviewerComponent} from '../../../shared/components/markdown-previewer.component'
+import {MarkdownPreviewerComponent} from '@app/shared/components/markdown-previewer.component'
+import {Article} from '@app/types'
 
 @Component({
 	selector: 'dcorg-article-details',

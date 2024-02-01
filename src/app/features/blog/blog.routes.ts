@@ -1,7 +1,7 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import {Route} from '@angular/router'
 
-import {Article} from '../../core/types/types'
+import {Article} from '@app/types'
 
 const blogArticleData = {
 	articles: [

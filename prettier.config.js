@@ -20,6 +20,8 @@ module.exports = {
 		'',
 		'<THIRD_PARTY_MODULES>',
 		'',
+		'^@app/(.*)$',
+		'',
 		'^[./]'
 	],
 	importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
