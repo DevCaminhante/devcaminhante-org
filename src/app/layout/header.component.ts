@@ -1,4 +1,4 @@
-import {CommonModule} from '@angular/common'
+import {CommonModule, NgOptimizedImage} from '@angular/common'
 import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core'
 import {Router, RouterLink, RouterLinkActive} from '@angular/router'
 
@@ -8,16 +8,19 @@ import {Constant} from '@app/constants'
 	selector: 'dcorg-header',
 	standalone: true,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
-	imports: [CommonModule, RouterLink, RouterLinkActive],
+	imports: [CommonModule, NgOptimizedImage, RouterLink, RouterLinkActive],
 	template: `
 		<div
 			class="header header-fixed u-unselectable header-animated header-dark bg-purple-dcorg"
 		>
 			<div class="header-brand">
-				<div class="nav-item no-hover">
-					<a>
-						<h6 class="title">DevCaminhante</h6>
-					</a>
+				<div class="nav-item no-hover pr-3">
+					<img
+						ngSrc="../../assets/DevCaminhante_dark.png"
+						height="54"
+						width="229"
+						alt="DevCaminhante Logo"
+					/>
 				</div>
 				<div class="nav-item nav-btn" id="header-btn">
 					<span></span>
