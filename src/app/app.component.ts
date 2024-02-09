@@ -1,5 +1,7 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core'
+import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core'
 import {RouterModule} from '@angular/router'
+
+import {PrimeNGConfig} from 'primeng/api'
 
 @Component({
 	selector: 'dcorg-root',
@@ -13,4 +15,10 @@ import {RouterModule} from '@angular/router'
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
-export class AppComponent {}
+export class AppComponent implements OnInit {
+	primengConfig = inject(PrimeNGConfig)
+
+	ngOnInit() {
+		this.primengConfig.ripple = true
+	}
+}

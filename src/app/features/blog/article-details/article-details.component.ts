@@ -14,7 +14,7 @@ import {Article} from '@app/types'
 	imports: [CommonModule, MarkdownPreviewerComponent],
 	template: `
 		@if (article$ | async; as article) {
-		<h3 class="u-center pb-2 u-text-center">{{ article.title }}</h3>
+		<h3 class="text-center">{{ article.title }}</h3>
 
 		<dcorg-markdown-previewer
 			filenameWithoutExtension="./articles/{{ article.slug }}.md"

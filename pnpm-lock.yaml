@@ -50,6 +50,15 @@ dependencies:
   ngx-markdown:
     specifier: 17.1.1
     version: 17.1.1(@angular/common@17.1.1)(@angular/core@17.1.1)(@angular/platform-browser@17.1.1)(marked@9.1.6)(rxjs@7.8.1)(zone.js@0.14.2)
+  primeflex:
+    specifier: ^3.3.1
+    version: 3.3.1
+  primeicons:
+    specifier: ^6.0.1
+    version: 6.0.1
+  primeng:
+    specifier: ^17.6.0
+    version: 17.6.0(@angular/common@17.1.1)(@angular/core@17.1.1)(@angular/forms@17.1.1)(rxjs@7.8.1)(zone.js@0.14.2)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.1
@@ -11972,6 +11981,31 @@ packages:
       '@jest/schemas': 29.6.3
       ansi-styles: 5.2.0
       react-is: 18.2.0
+
+  /primeflex@3.3.1:
+    resolution: {integrity: sha512-zaOq3YvcOYytbAmKv3zYc+0VNS9Wg5d37dfxZnveKBFPr7vEIwfV5ydrpiouTft8MVW6qNjfkaQphHSnvgQbpQ==}
+    dev: false
+
+  /primeicons@6.0.1:
+    resolution: {integrity: sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==}
+    dev: false
+
+  /primeng@17.6.0(@angular/common@17.1.1)(@angular/core@17.1.1)(@angular/forms@17.1.1)(rxjs@7.8.1)(zone.js@0.14.2):
+    resolution: {integrity: sha512-Q9wEbTE1D+Tt0dtCg1lTt7JcV5klQhRByciU67SySYNaDQDutKUKtvMs2AUF5iZAbh8mp1GHzElJWzrXa+TuGw==}
+    peerDependencies:
+      '@angular/common': ^17.0.0
+      '@angular/core': ^17.0.0
+      '@angular/forms': ^17.0.0
+      rxjs: ^6.0.0 || ^7.8.1
+      zone.js: ~0.14.0
+    dependencies:
+      '@angular/common': 17.1.1(@angular/core@17.1.1)(rxjs@7.8.1)
+      '@angular/core': 17.1.1(rxjs@7.8.1)(zone.js@0.14.2)
+      '@angular/forms': 17.1.1(@angular/common@17.1.1)(@angular/core@17.1.1)(@angular/platform-browser@17.1.1)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+      zone.js: 0.14.2
+    dev: false
 
   /prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}

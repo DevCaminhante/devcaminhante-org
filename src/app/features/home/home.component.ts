@@ -1,13 +1,15 @@
 import {CommonModule} from '@angular/common'
 import {ChangeDetectionStrategy, Component} from '@angular/core'
 
+import {TimelineModule} from 'primeng/timeline'
+
 @Component({
 	selector: 'dcorg-home',
 	standalone: true,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
-	imports: [CommonModule],
+	imports: [CommonModule, TimelineModule],
 	template: `
-		<p>
+		<p class="w-full sm:w-8">
 			DevCaminhante &eacute; um projeto dedicado ao acolhimento tanto para quem
 			est&aacute; pensando em entrar na &aacute;rea de programa&ccedil;&atilde;o
 			como para quem est&aacute; come&ccedil;ando a aprender nesta &aacute;rea.
@@ -19,6 +21,10 @@ import {ChangeDetectionStrategy, Component} from '@angular/core'
 	`,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	styles: ``,
+	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
+	host: {
+		class: 'card flex justify-content-start sm:justify-content-center'
+	},
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
