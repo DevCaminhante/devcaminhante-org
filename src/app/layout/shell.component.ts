@@ -12,7 +12,7 @@ import {HeaderComponent} from '@app/layout/header.component'
 	template: `
 		<dcorg-header></dcorg-header>
 
-		<div class="mt-8 mx-3 u-center u-text-justify">
+		<div class="m-3 text-justify">
 			<router-outlet></router-outlet>
 		</div>
 	`,

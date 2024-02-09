@@ -23,8 +23,8 @@
 		"noPropertyAccessFromIndexSignature": true,
 		"noUnusedLocals": true,
 		"paths": {
-			"@app/constants": ["src/app/core/constants/constants.ts"],
 			"@app/blog/*": ["src/app/features/blog/*"],
+			"@app/constants": ["src/app/core/constants/constants.ts"],
 			"@app/home/*": ["src/app/features/home/*"],
 			"@app/layout/*": ["src/app/layout/*"],
 			"@app/schemas": ["src/app/core/schemas/schemas.ts"],

@@ -1,6 +1,7 @@
 import {HttpClient, provideHttpClient, withFetch} from '@angular/common/http'
 import {ApplicationConfig} from '@angular/core'
 import {provideClientHydration} from '@angular/platform-browser'
+import {provideAnimationsAsync} from '@angular/platform-browser/animations/async'
 import {
 	provideRouter,
 	withComponentInputBinding,
@@ -20,6 +21,7 @@ export const appConfig: ApplicationConfig = {
 			withComponentInputBinding(),
 			withRouterConfig({paramsInheritanceStrategy: 'always'})
 		),
-		provideMarkdown({loader: HttpClient})
+		provideMarkdown({loader: HttpClient}),
+		provideAnimationsAsync()
 	]
 }

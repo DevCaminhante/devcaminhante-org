@@ -1,87 +1,263 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'cirrus-ui/src/cirrus-ext' as * with (
-	$config: (
-		excludes: (
-			// Core Components
-			'BUTTON',
-			'CODE',
-			'FOOTER',
-			'FORMS',
-			'FRAMES',
-			// 'HEADER',
-			'LISTS',
-			'PROGRESS',
-			'TABLE',
-			// Extended Components
-			'ACCORDION',
-			'AVATAR',
-			'BREADCRUMB',
-			'CARD',
-			'FORM-EXT',
-			'LINK-EXT',
-			'MODAL',
-			'PAGINATION',
-			'PLACEHOLDER',
-			'TABS',
-			// 'TAGS',
-			'TILES',
-			'TOAST',
-			'TOOLTIPS',
-			// Utilities
-			'ABSOLUTE',
-			'BLUR',
-			'BORDER',
-			'CLEARFIX',
-			'DISPLAY',
-			'FLEX',
-			'MISC',
-			'OPACITY',
-			'OVERFLOW',
-			'POSITION',
-			'SHADOWS',
-			'TRANSITIONS',
-			'ZINDEX'
-		),
-		viewports: (
-			CLEARFIX: false,
-			DISPLAY: false,
-			FLEX: false,
-			FLOAT: false,
-			OVERFLOW: false,
-			POSITION: false,
-			TEXT: false,
-			MARGIN-PADDING: false,
-			OPACITY: false,
-			BACKGROUND-OPACITY: false,
-			COLOR-OPACITY: false,
-			BORDER-OPACITY: false,
-			WIDTHS: false,
-			HEIGHTS: false,
-			ZINDEX: false,
-			ABSOLUTES: false,
-			GAP: false,
-			MIN-HEIGHT: false,
-			MAX-HEIGHT: false,
-			MIN-WIDTH: false,
-			MAX-WIDTH: false,
-			GRID: false,
-			ROUND: false,
-			SHADOWS: false,
-			LETTER-SPACING: false,
-			BLUR: false,
-			TRANSITION-DURATION: false,
-			LINE-HEIGHT: false,
-			BORDER-WIDTH: false,
-			VERTICAL-ALIGN: false
-		),
-		extend: (
-			colors: (
-				extended: (
-					'purple': (
-						'dcorg': #460f6c
-					)
-				)
-			)
-		)
-	)
-);
+//@use 'cirrus-ui/src/cirrus-ext' as * with (
+//	$config: (
+//		excludes: (
+//			// Core Components
+//			'BUTTON',
+//			'CODE',
+//			'FOOTER',
+//			'FORMS',
+//			'FRAMES',
+//			// 'HEADER',
+//			'LISTS',
+//			'PROGRESS',
+//			'TABLE',
+//			// Extended Components
+//			'ACCORDION',
+//			'AVATAR',
+//			'BREADCRUMB',
+//			'CARD',
+//			'FORM-EXT',
+//			'LINK-EXT',
+//			'MODAL',
+//			'PAGINATION',
+//			'PLACEHOLDER',
+//			'TABS',
+//			// 'TAGS',
+//			'TILES',
+//			'TOAST',
+//			'TOOLTIPS',
+//			// Utilities
+//			'ABSOLUTE',
+//			'BLUR',
+//			'BORDER',
+//			'CLEARFIX',
+//			'DISPLAY',
+//			'FLEX',
+//			'MISC',
+//			'OPACITY',
+//			'OVERFLOW',
+//			'POSITION',
+//			'SHADOWS',
+//			'TRANSITIONS',
+//			'ZINDEX'
+//			'RESET'
+//		),
+//		viewports: (
+//			CLEARFIX: false,
+//			DISPLAY: false,
+//			FLEX: false,
+//			FLOAT: false,
+//			OVERFLOW: false,
+//			POSITION: false,
+//			TEXT: false,
+//			MARGIN-PADDING: false,
+//			OPACITY: false,
+//			BACKGROUND-OPACITY: false,
+//			COLOR-OPACITY: false,
+//			BORDER-OPACITY: false,
+//			WIDTHS: false,
+//			HEIGHTS: false,
+//			ZINDEX: false,
+//			ABSOLUTES: false,
+//			GAP: false,
+//			MIN-HEIGHT: false,
+//			MAX-HEIGHT: false,
+//			MIN-WIDTH: false,
+//			MAX-WIDTH: false,
+//			GRID: false,
+//			ROUND: false,
+//			SHADOWS: false,
+//			LETTER-SPACING: false,
+//			BLUR: false,
+//			TRANSITION-DURATION: false,
+//			LINE-HEIGHT: false,
+//			BORDER-WIDTH: false,
+//			VERTICAL-ALIGN: false
+//		),
+//		extend: (
+//			colors: (
+//				extended: (
+//					'purple': (
+//						'dcorg': #460f6c
+//					)
+//				)
+//			)
+//		)
+//	)
+//);
+
+:root {
+	--dcorg-purple: #460f6c;
+	--dcorg-white: #ffffff;
+}
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		/* Prevent setting borders from increasing the size of an element */
+		box-sizing: border-box;
+		text-rendering: optimizeLegibility;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	/* Remove default margin and padding */
+	html,
+	body,
+	p,
+	ol,
+	ul,
+	li,
+	dl,
+	dt,
+	dd,
+	blockquote,
+	figure,
+	fieldset,
+	legend,
+	textarea,
+	pre,
+	iframe,
+	hr,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Allow % styles to work on page */
+	html,
+	body {
+		border: none;
+		height: 100%;
+	}
+
+	/* Nunito Sans for the font */
+	body {
+		letter-spacing: 0.01rem;
+		line-height: 1.8; /* Globally adjust line height */
+		font-size: 1rem;
+		font-weight: 400;
+		font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+			'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+			'Segoe UI Emoji', 'Segoe UI Symbol';
+		color: #000000;
+	}
+
+	/* Remove bullets from unordered lists */
+	ul {
+		list-style: none;
+	}
+
+	/* Setting up embedded content */
+	audio,
+	canvas,
+	iframe,
+	img,
+	embed,
+	object,
+	svg,
+	video {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	iframe {
+		outline: 0;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 3px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	}
+
+	/* Page sections set to block */
+	article,
+	aside,
+	figure,
+	footer,
+	header,
+	hgroup,
+	section {
+		display: block;
+	}
+
+	// Inputs must inherit font
+	button,
+	input,
+	optgroup,
+	select,
+	textarea {
+		margin: 0;
+		font-family: inherit;
+		font-size: inherit;
+	}
+
+	/* Base styling for labels */
+	label {
+		display: inline-block;
+		margin: 0.25rem 0;
+	}
+
+	/* Base styling for fieldsets */
+	fieldset {
+		padding: 1rem;
+
+		legend {
+			font-weight: bold;
+		}
+	}
+
+	/* Hidden elements must not show */
+	[hidden] {
+		display: none !important;
+	}
+
+	/* When focusing any element */
+	:focus {
+		box-shadow: unset;
+		outline: none;
+	}
+
+	/* Remove all animations based on preference */
+	@media (prefers-reduced-motion: reduce) {
+		html:focus-within {
+			scroll-behavior: auto;
+		}
+
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}
+
+@import 'node_modules/primeng/resources/themes/bootstrap4-light-purple/theme.css';
+@import 'node_modules/primeng/resources/primeng.min.css';
+@import 'node_modules/primeicons/primeicons.css';
+@import 'node_modules/primeflex/primeflex.css';
+
+.dcorg-purple {
+	background: var(--dcorg-purple);
+}
+
+.p-menubar-start img {
+	margin-right: 2rem;
+}
+
+a.p-menubar-button {
+	flex: auto;
+	justify-content: right;
+}
