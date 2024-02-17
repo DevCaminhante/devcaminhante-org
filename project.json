@@ -58,14 +58,6 @@
 			},
 			"defaultConfiguration": "production"
 		},
-		"copy-assets": {
-			"executor": "nx:run-commands",
-			"options": {
-				"commands": [
-					"shx rm -rf ./dist && shx mkdir -p ./dist/ && shx cp -r ./src/app/features/blog/article-list/articles ./dist/"
-				]
-			}
-		},
 		"serve": {
 			"executor": "@angular-devkit/build-angular:dev-server",
 			"configurations": {

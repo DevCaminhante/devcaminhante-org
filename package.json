@@ -5,7 +5,7 @@
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
 		"start": "nx serve",
-		"start:dev": "nx copy-assets && nx serve",
+		"start:dev": "nx build && nx serve",
 		"build": "nx build",
 		"format:check": "prettier --check .",
 		"format:check-staged": "prettier --cache --check .",
