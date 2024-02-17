@@ -25,7 +25,7 @@
 					{
 						"glob": "*.md",
 						"input": "./src/app/features/blog/article-list/articles",
-						"output": "./articles"
+						"output": "assets/markdown"
 					},
 					{
 						"glob": "article-list.json",
