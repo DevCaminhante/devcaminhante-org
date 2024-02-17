@@ -26,6 +26,11 @@
 						"glob": "*.md",
 						"input": "./src/app/features/blog/article-list/articles",
 						"output": "./articles"
+					},
+					{
+						"glob": "article-list.json",
+						"input": "./src/app/features/blog/article-list",
+						"output": "assets/json"
 					}
 				],
 				"styles": ["./src/styles.scss"],
