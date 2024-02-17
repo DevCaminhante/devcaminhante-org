@@ -24,11 +24,13 @@
 		"noUnusedLocals": true,
 		"paths": {
 			"@app/blog/*": ["src/app/features/blog/*"],
+			"@app/components/*": ["src/app/shared/components/*"],
 			"@app/constants": ["src/app/core/constants/constants.ts"],
 			"@app/home/*": ["src/app/features/home/*"],
 			"@app/layout/*": ["src/app/layout/*"],
+			"@app/resolvers/*": ["src/app/shared/resolvers/*"],
 			"@app/schemas": ["src/app/core/schemas/schemas.ts"],
-			"@app/shared/*": ["src/app/shared/*"],
+			"@app/services/*": ["src/app/shared/services/*"],
 			"@app/sobre/*": ["src/app/features/sobre/*"],
 			"@app/types": ["src/app/core/types/types.ts"]
 		},
