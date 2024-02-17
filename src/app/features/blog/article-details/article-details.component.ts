@@ -1,40 +1,60 @@
 import {CommonModule} from '@angular/common'
-import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core'
+import {
+	ChangeDetectionStrategy,
+	Component,
+	inject,
+	OnDestroy,
+	OnInit
+} from '@angular/core'
 import {ActivatedRoute} from '@angular/router'
 
-import {map, Observable} from 'rxjs'
-
-import {MarkdownPreviewerComponent} from '@app/shared/components/markdown-previewer.component'
-import {Article} from '@app/types'
+import {MarkdownComponent} from 'ngx-markdown'
+import {Subscription} from 'rxjs'
 
 @Component({
 	selector: 'dcorg-article-details',
 	standalone: true,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
-	imports: [CommonModule, MarkdownPreviewerComponent],
+	imports: [CommonModule, MarkdownComponent],
 	template: `
-		@if (article$ | async; as article) {
-		<h3 class="text-center">{{ article.title }}</h3>
+		@if (content) {
+		<div class="w-full sm:w-8">
+			<!--				<h3 class="text-center">{{ article.title }}</h3>-->
 
-		<dcorg-markdown-previewer
-			filenameWithoutExtension="./articles/{{ article.slug }}.md"
-		></dcorg-markdown-previewer>
+			<markdown>{{ content }}</markdown>
+		</div>
 		}
 	`,
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
-	styles: ``,
+	styles: `
+		:host {
+			::ng-deep markdown h3 {
+				text-align: center;
+				padding-bottom: 0.5rem !important;
+			}
+		}
+	`,
+	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
+	host: {
+		class: 'card flex justify-content-start sm:justify-content-center'
+	},
 	// eslint-disable-next-line sort-keys-fix/sort-keys-fix
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ArticleDetailsComponent implements OnInit {
-	article$: Observable<Article> | undefined
-	private activatedRoute = inject(ActivatedRoute)
+export class ArticleDetailsComponent implements OnInit, OnDestroy {
+	content = ''
+	#activatedRoute = inject(ActivatedRoute)
+	#subscriptions$ = new Subscription()
 
 	ngOnInit() {
-		this.article$ = this.activatedRoute.paramMap.pipe(
-			map(() =>
-				typeof window !== 'undefined' ? window.history.state['article'] : ''
-			)
+		this.#subscriptions$.add(
+			this.#activatedRoute.data.subscribe(({json}) => {
+				this.content = json
+			})
 		)
+	}
+
+	ngOnDestroy() {
+		this.#subscriptions$.unsubscribe()
 	}
 }

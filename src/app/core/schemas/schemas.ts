@@ -8,6 +8,7 @@ export const AppRouteSchema = object({
 
 export const ArticleSchema = object({
 	author: string(),
+	content: string(),
 	date: string(),
 	slug: string(),
 	title: string()

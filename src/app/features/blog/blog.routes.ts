@@ -1,18 +1,8 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import {Route} from '@angular/router'
 
-import {Article} from '@app/types'
-
-const blogArticleData = {
-	articles: [
-		{
-			author: 'Klaus Ferreira',
-			date: '2021-07-07',
-			slug: '2021-07-07_e-nos-tornamos-devcaminhantes',
-			title: '...E nos tornamos DevCaminhantes'
-		}
-	] as Article[]
-}
+import {articleContentResolver} from '@app/resolvers/article-content.resolver'
+import {articleListResolver} from '@app/resolvers/article-list.resolver'
 
 export const blogRoutes: Route[] = [
 	{
@@ -22,7 +12,7 @@ export const blogRoutes: Route[] = [
 	},
 	{
 		path: 'articles',
-		data: blogArticleData,
+		resolve: {json: articleListResolver},
 		loadComponent: () =>
 			import('./article-list/article-list.component').then(
 				(m) => m.ArticleListComponent
@@ -30,6 +20,7 @@ export const blogRoutes: Route[] = [
 	},
 	{
 		path: 'articles/:slug',
+		resolve: {json: articleContentResolver},
 		loadComponent: () =>
 			import('./article-details/article-details.component').then(
 				(m) => m.ArticleDetailsComponent
