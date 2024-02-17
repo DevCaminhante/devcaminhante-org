@@ -32,7 +32,6 @@ import {MenubarModule} from 'primeng/menubar'
 			::ng-deep .p-menuitem-content {
 				background: var(--dcorg-purple);
 				border-radius: 0;
-				font-size: 1.1rem;
 			}
 		}
 	`,
